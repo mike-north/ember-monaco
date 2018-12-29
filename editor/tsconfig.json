@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "types": ["monaco-editor"],
+    "lib": ["scripthost", "es2015", "dom"],
+    "rootDir": ".",
+    "moduleResolution": "node"
+  },
+  "extends": "../tsconfig.json",
+  "include": ["index.ts", "./**/*.ts"]
+}
