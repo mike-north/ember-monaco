@@ -3,7 +3,7 @@
 [Monaco editor](https://github.com/Microsoft/monaco-editor) for ember.js apps
 
 [![Build Status](https://travis-ci.org/mike-north/ember-monaco.svg?branch=master)](https://travis-ci.org/mike-north/ember-monaco)
-[![Version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/ember-monaco)
+[![Version](https://img.shields.io/npm/v/ember-monaco.svg)](https://www.npmjs.com/package/ember-monaco)
 
 ## Installation
 
