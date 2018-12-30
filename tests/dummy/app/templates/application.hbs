@@ -3,9 +3,13 @@
 
 {{code-editor
   language="typescript"
-  code="let x: string = 'foo';"
+  code=sample1
+  onChange=(action (mut sample1))
   theme="light"
 }}
+<pre>
+  {{sample1}}
+</pre>
 {{code-editor
   language="typescript"
   code="let y: number = 17;"

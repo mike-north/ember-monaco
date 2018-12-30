@@ -1,5 +1,5 @@
 import * as mon from 'monaco-editor';
-
+import conn from './conn';
 let editor: undefined | mon.editor.IStandaloneCodeEditor;
 
 export function updateEditor({
