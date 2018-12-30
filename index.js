@@ -61,6 +61,23 @@ module.exports = {
   config: function(env /*, appConfig*/) {
     environment = env;
   },
+  included: function(parent) {
+    parent.options.fingerprint = parent.options.fingerprint || {};
+    parent.options.fingerprint.exclude =
+      parent.options.fingerprint.exclude || [];
+    // the monaco-editor loader doesn't work with fingerprinted assets (yet),
+    // so we exclude it.
+    parent.options.fingerprint.exclude.push('ember-monaco/vs');
+
+    // TODO: disable uglify for CSS and JS to speed up the build and:
+    // [WARN] `ember-monaco-editor/vs/editor/editor.main.js` took: 87370ms (more than 20,000ms)
+    parent.import('node_modules/penpal/lib/index.js', {
+      using: [{ transformation: 'cjs', as: 'penpal' }]
+    });
+    // TODO: consider lazy-loading the loader using the LoaderService
+    // parent.import('vendor/ember-monaco-editor/vs/loader.js');
+    // parent.import('vendor/ember-monaco-editor/vs/editor/editor.main');
+  },
   treeForFrameScripts: function() {
     let src = maybeDebug(
       new Funnel(path.join(__dirname, 'editor'), {
