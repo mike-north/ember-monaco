@@ -3,7 +3,8 @@
     "types": ["monaco-editor"],
     "lib": ["scripthost", "es2015", "dom"],
     "rootDir": ".",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "isolatedModules": false
   },
   "extends": "../tsconfig.json",
   "include": ["index.ts", "./**/*.ts"]
