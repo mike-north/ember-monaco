@@ -1,11 +1,14 @@
 {
   "name": "ember-monaco",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mike-north/ember-monaco.git"
+  },
   "license": "BSD-2-Clause",
   "author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
   "directories": {
@@ -20,7 +23,8 @@
     "test": "ember test",
     "test:all": "ember try:each",
     "prepublishOnly": "ember ts:precompile",
-    "postpublish": "ember ts:clean"
+    "postpublish": "ember ts:clean",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@babel/preset-env": "^7.2.3",
