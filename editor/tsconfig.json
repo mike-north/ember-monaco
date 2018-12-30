@@ -4,8 +4,24 @@
     "lib": ["scripthost", "es2015", "dom"],
     "rootDir": ".",
     "moduleResolution": "node",
-    "isolatedModules": false
+    "target": "es2017",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noEmitOnError": false,
+    "noEmit": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "baseUrl": ".",
+    "module": "es6"
   },
-  "extends": "../tsconfig.json",
   "include": ["index.ts", "./**/*.ts"]
 }
