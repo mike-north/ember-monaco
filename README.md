@@ -61,3 +61,7 @@ For more information on using ember-cli, visit [https://ember-cli.com/](https://
 ## License
 
 This project is licensed under the [BSD-2-Clause](LICENSE.md).
+
+## Thanks
+
+Thanks to @MiguelMadero for writing [ember-monaco-editor](https://github.com/MiguelMadero/ember-monaco-editor), which served as a starting point for this work
