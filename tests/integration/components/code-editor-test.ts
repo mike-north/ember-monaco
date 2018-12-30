@@ -30,8 +30,9 @@ module('Integration | Component | code-editor', function(hooks) {
         const frameWin = frame.contentWindow;
         if (!frameWin) throw new Error('No frame window');
         const frameDoc = frameWin.document;
-        const x = frameDoc.querySelector('.monaco-editor');
-        return !!x;
+        const x = frameDoc.querySelector<HTMLDivElement>('.monaco-editor');
+        if (!x) return false;
+        return x.innerText.trim();
       },
       {
         timeout: 60000,
