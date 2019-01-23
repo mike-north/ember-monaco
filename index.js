@@ -78,6 +78,11 @@ module.exports = {
     // parent.import('vendor/ember-monaco-editor/vs/loader.js');
     // parent.import('vendor/ember-monaco-editor/vs/editor/editor.main');
   },
+  importTransforms() {
+    return this.addons
+      .filter(addon => addon.importTransforms)
+      .reduce((transforms, addon) => Object.assign(transforms, addon.importTransforms()), {});
+  },
   treeForFrameScripts: function() {
     let src = maybeDebug(
       new Funnel(path.join(__dirname, 'editor'), {
