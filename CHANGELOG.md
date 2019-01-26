@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/mike-north/ember-monaco/compare/v1.0.1...v1.0.2) (2019-01-26)
+
+
+### Bug Fixes
+
+* **cli:** run importTransforms for nested addons ([b71cd39](https://github.com/mike-north/ember-monaco/commit/b71cd39))
+
 ## [1.0.1](https://github.com/mike-north/ember-monaco/compare/v1.0.0...v1.0.1) (2018-12-30)
 
 
