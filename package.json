@@ -80,7 +80,7 @@
     "loader.js": "4.7.0",
     "qunit-dom": "0.8.4",
     "semantic-release": "15.13.3",
-    "typescript": "3.2.2",
+    "typescript": "3.2.4",
     "typescript-eslint-parser": "21.0.2"
   },
   "engines": {
