@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/mike-north/ember-monaco/compare/v1.0.2...v1.0.3) (2019-03-05)
+
+
+### Bug Fixes
+
+* **deps:** monaco-editor ([c148d3a](https://github.com/mike-north/ember-monaco/commit/c148d3a))
+
 ## [1.0.2](https://github.com/mike-north/ember-monaco/compare/v1.0.1...v1.0.2) (2019-01-26)
 
 
