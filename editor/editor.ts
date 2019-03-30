@@ -93,6 +93,9 @@ export function setupEditor(cfg: {
           value: ed.getValue()
         });
       });
+
+      client.onReady()
+
       setupKeyBindings(ed, client);
       installResizeWatcher(wrapper, editor.layout.bind(editor), 2000);
     }

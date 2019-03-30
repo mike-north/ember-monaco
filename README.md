@@ -20,6 +20,11 @@ import Controller from '@ember/controller';
 
 export default class Application extends Controller {
   sample1 = "let x: string = 'foo'";
+
+  @action
+  editorReady (editor) {
+    // editor: Monaco editor instance
+  }
 }
 ```
 
@@ -31,6 +36,7 @@ export default class Application extends Controller {
   code=sample1
   onChange=(action (mut sample1))
   theme="light"
+  onReady=(action editorReady)
 }}
 ```
 

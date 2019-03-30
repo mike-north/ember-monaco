@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import Penpal, { IChildConnectionObject } from 'penpal';
+import * as mon from 'monaco-editor';
 
 export interface CodeEditorKeyCommand {
   cmd?: boolean;
@@ -16,6 +17,7 @@ export default class CodeEditor extends Component {
   public theme: 'vs-dark' | 'vs-light' = 'vs-dark'; // TODO: proper default value
   public onChange?: (v: string) => any;
   public onKeyCommand?: (evt: CodeEditorKeyCommand) => any;
+  public onReady?: (editor: mon.editor.IStandaloneCodeEditor) => any;
 
   public buildEditorOptions(): object {
     const { code, language, theme } = this;
@@ -36,6 +38,17 @@ export default class CodeEditor extends Component {
     }
   }
 
+  public onEditorReady() {
+    const iframe: any = this.element.querySelector<HTMLIFrameElement>(
+      '.frame-container > iframe'
+    )
+    const editor = (<any>iframe.contentWindow).editor
+
+    if (this.onReady) {
+      this.onReady(editor)
+    }
+  }
+
   public didInsertElement() {
     super.didInsertElement();
     const container = this.element.querySelector<HTMLDivElement>(
@@ -48,7 +61,8 @@ export default class CodeEditor extends Component {
       appendTo: container,
       methods: {
         onValueChanged: this.onEditorTextChanged.bind(this),
-        keyCommand: this._onKeyCommand.bind(this)
+        keyCommand: this._onKeyCommand.bind(this),
+        onReady: this.onEditorReady.bind(this)
       },
       url: '/ember-monaco/frame.html'
     });
