@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/mike-north/ember-monaco/compare/v1.0.3...v1.1.0) (2019-03-31)
+
+
+### Features
+
+* onReady argument ([1e86b8c](https://github.com/mike-north/ember-monaco/commit/1e86b8c))
+
 ## [1.0.3](https://github.com/mike-north/ember-monaco/compare/v1.0.2...v1.0.3) (2019-03-05)
 
 
