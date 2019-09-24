@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/mike-north/ember-monaco/compare/v1.1.0...v1.1.1) (2019-09-24)
+
+
+### Bug Fixes
+
+* **deps:** stable ember infrastructure ([8d5a9e7](https://github.com/mike-north/ember-monaco/commit/8d5a9e7))
+
 # [1.1.0](https://github.com/mike-north/ember-monaco/compare/v1.0.3...v1.1.0) (2019-03-31)
 
 
