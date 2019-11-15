@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/mike-north/ember-monaco/compare/v1.1.1...v1.2.0) (2019-11-15)
+
+
+### Bug Fixes
+
+* **testem:** gpu option caused test crash ([9f7fe5b](https://github.com/mike-north/ember-monaco/commit/9f7fe5b1b817e680fd5866d4dd1b62e3b3487145))
+
+
+### Features
+
+* **read-only:** can create editor as read-only ([e5cad9c](https://github.com/mike-north/ember-monaco/commit/e5cad9ca476ab5f3807c2ef0afb0a7f10c52995b))
+
 ## [1.1.1](https://github.com/mike-north/ember-monaco/compare/v1.1.0...v1.1.1) (2019-09-24)
 
 
