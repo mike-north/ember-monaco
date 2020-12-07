@@ -35,7 +35,7 @@
     "ember-cli-htmlbars": "^5.0.0",
     "ember-cli-typescript": "^2.0.0-rc.1",
     "monaco-editor": "^0.16.0",
-    "penpal": "^3.0.7",
+    "penpal": "^5.0.0",
     "rollup-plugin-babel": "^4.2.0",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^4.0.0"
