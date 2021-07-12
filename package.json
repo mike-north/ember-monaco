@@ -79,7 +79,7 @@
     "husky": "2.4.1",
     "loader.js": "4.7.0",
     "qunit-dom": "1.6.0",
-    "semantic-release": "15.13.12",
+    "semantic-release": "17.2.3",
     "typescript": "3.2.4",
     "typescript-eslint-parser": "21.0.2"
   },
