@@ -11,6 +11,7 @@ const rollup = require('broccoli-rollup');
 const rollupNodeResolve = require('rollup-plugin-node-resolve');
 const rollupCommonjs = require('rollup-plugin-commonjs');
 const rollupBabel = require('rollup-plugin-babel');
+const resolvePackagePath = require('resolve-package-path');
 
 let environment;
 
@@ -21,7 +22,11 @@ function maybeDebug(tree, name) {
 }
 
 function getMonacoEditorModulePath() {
-  var monacoEditorModulePath = 'node_modules/monaco-editor';
+  const monacoEditorModulePath = resolvePackagePath('monaco-editor')
+    .split('/')
+    .slice(0, -1)
+    .join('/');
+
   return environment !== 'production'
     ? monacoEditorModulePath + '/dev/vs'
     : monacoEditorModulePath + '/min/vs';
@@ -120,8 +125,13 @@ module.exports = {
       '3-es-rollup'
     );
 
+    const regeneratorPath = require.resolve('regenerator-runtime')
+      .split('/')
+      .slice(0, -1)
+      .join('/');
+
     const regeneratorTree = maybeDebug(
-      new Funnel('node_modules/regenerator-runtime', {
+      new Funnel(regeneratorPath, {
         include: ['runtime.js'],
         destDir: '.'
       }),
